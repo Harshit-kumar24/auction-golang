@@ -128,6 +128,7 @@ func CloseLiveAuction(db *gorm.DB) ([]models.Auction, error) {
 		auction.AuctionStatus = "closed"
 		closedAuctions = append(closedAuctions, auction)
 		log.Printf("Auction %s is now closed", auction.ItemID)
+		log.Printf("Winner of the auction %d is %s with bid price: %.2f", auction.ItemID, auction.CurrentWinner, auction.HighestBid)
 	}
 	return closedAuctions, nil
 }

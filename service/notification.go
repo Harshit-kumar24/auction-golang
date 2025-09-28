@@ -7,5 +7,5 @@ import (
 )
 
 func SendNotification(userId string, auctions []models.Auction) {
-	fmt.Println("successfully send email to userId: ", userId, " for ", len(auctions), " aucitons...")
+	fmt.Println("successfully send email to userId: ", userId, " for ", len(auctions), " auctions...")
 }

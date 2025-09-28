@@ -21,17 +21,4 @@ func SetupResources() {
 	runtime.GOMAXPROCS(numCPU)
 
 	//LIMITING MEMORY
-	memEnv := os.Getenv("MAX_MEMORY_MB")
-	maxMemoryMB := 0
-	if memEnv != "" {
-		if memVal, err := strconv.Atoi(memEnv); err == nil && memVal > 0 {
-			maxMemoryMB = memVal
-		}
-	}
-	if maxMemoryMB > 0 {
-		log.Printf("Setting memory limit for buffers to %d MB", maxMemoryMB)
-	} else {
-		log.Println("No memory limit specified in env, using dynamic allocation.")
-	}
-
 }
