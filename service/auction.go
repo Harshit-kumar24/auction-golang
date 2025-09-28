@@ -8,6 +8,7 @@ import (
 	// "time"
 
 	"github.com/Harshit-kumar24/eauction/models"
+	"github.com/Harshit-kumar24/eauction/utils"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
 	"gorm.io/gorm"
@@ -129,6 +130,9 @@ func CloseLiveAuction(db *gorm.DB) ([]models.Auction, error) {
 		closedAuctions = append(closedAuctions, auction)
 		log.Printf("Auction %s is now closed", auction.ItemID)
 		log.Printf("Winner of the auction %d is %s with bid price: %.2f", auction.ItemID, auction.CurrentWinner, auction.HighestBid)
+		//writing to file 
+		fileName := auction.ItemID + ".txt"
+		utils.WriteJSONToFile(fileName,auction)
 	}
 	return closedAuctions, nil
 }

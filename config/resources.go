@@ -20,5 +20,4 @@ func SetupResources() {
 	log.Printf("Setting CPU cores to %d", numCPU)
 	runtime.GOMAXPROCS(numCPU)
 
-	//LIMITING MEMORY
 }

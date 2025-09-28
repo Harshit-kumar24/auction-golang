@@ -13,7 +13,7 @@ func ScheduleAuction(db *gorm.DB) {
 	_, err := c.AddFunc("*/10 * * * * *", func() {
 
 		//to fetch scheduled auctions and convert them to live
-		nextAuctions, _ := FetchNextLiveAuctions(db)
+		nextAuctions, _ := FetchNextLiveAuctions(db) 
 
 		//to fetch live auctions and convert them to closed
 		closedAuctions, _ := CloseLiveAuction(db)
