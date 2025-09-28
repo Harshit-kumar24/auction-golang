@@ -1,3 +1,12 @@
+### List of Contents
+----------------------------
+- [How to setup the project](https://github.com/Harshit-kumar24/auction-golang?tab=readme-ov-file#how-to-setup-the-project)
+- [Sample Architecture](https://github.com/Harshit-kumar24/auction-golang?tab=readme-ov-file#sample-architecture)
+- [How each functionality is working](https://github.com/Harshit-kumar24/auction-golang?tab=readme-ov-file#how-each-functionality-is-working)
+- [Problem that should be addressed](https://github.com/Harshit-kumar24/auction-golang?tab=readme-ov-file#problem-that-should-be-addressed)
+- [Technologies and framework used](https://github.com/Harshit-kumar24/auction-golang?tab=readme-ov-file#technologies-and-frameworks-used)
+
+  
 ### Objective 
 The goal of this exercise is to design and implement an Auction Simulator that runs
 multiple auctions concurrently, collects bids from simulated bidders, and measures
@@ -35,7 +44,7 @@ successfully connected to the postgres database...!!
 - congratulations! the proejct is now live 
 ---
 ### Sample Architecture 
-![[Pasted image 20250928063015.png]]
+![basic high level design](https://github.com/Harshit-kumar24/auction-golang/blob/14965e06dd07c027a94d48d298be4cdc8ccb7a64/images/Pasted%20image%2020250928063015.png)
 ### How each functionality is working
 
 1. **All bidders receive these 20 attributes and can respond with a bid. It is not
